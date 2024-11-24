@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Admin Pannel</title>
+    <style>
+      body{
+        background: rgb(255,255,255);
+background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(0,0,0,1) 58%, rgba(0,10,5,1) 100%);
+      }
+    </style>
+  </head>
+  <body>
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-md">
+            <a class="navbar-brand" href="adminhome">USER MANAGEMENT</a>
+          </div>
+        </nav>
+      
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-md-5">
+                    <h2 class="text-white bg-dark text-center p-2">UPDATE STUDENTS DETIALS</h2>
+                    <br>
+                
+                    <form action="/update/{{d.id}}" method="post">
+                        {% csrf_token %}   
+                       
+                        <div class="form-group">
+                          <input  class="form-control mt-2"  type="text" placeholder="Enter the username" name="name" value="{{d.name}}" required>
+                        </div>
+                       
+                        <div class="form-group">
+                            <input  class="form-control mt-2"  type="email" placeholder="Enter the email" name="email" value="{{d.email}}" required>
+                        </div>
+                        <br>
+                        <div class="d-grid gap-2">
+                          <button class="btn btn-success" type="submit">Update</button>
+                        </div>
+            
+                    </form>
+                </div>
+                
+
+                </div>
+
+            </div>
+        </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
