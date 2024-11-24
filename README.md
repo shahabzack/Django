@@ -1,4 +1,6 @@
-Django Login and Registration with CRUD Operations
+                                            *
+                                            Django Login and Registration with CRUD Operations
+
 Project Overview
 This project is a Django-based web application implementing user authentication with login and registration functionality. Additionally, I’ve added CRUD operations to the Django admin panel, allowing for the management of users by the admin. The goal was to practice user authentication and how to manage users from the admin interface.
 
